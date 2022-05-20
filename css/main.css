@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+:root{
+  
+    --cards-color: #272727;
+    --text-color: #ffffff;
+    --icons--color: rgb(255, 157, 0);
+
+}
+
+.main{
+    background-color: rgb(27, 27, 27);
+    padding: 0rem 3rem 0rem 3rem;
+}
+
+/*/*//*/*//*/*//*/*//*/*//* navigation bar */
+
+#navigation{
+    transition: 1s ease-in-out;
+    width: 20rem;
+    height: 80%;
+    background-color: var(--cards-color);
+}
+
+.image-wrap{
+    height: 65%;
+}
+
+.button{
+    background-color: #ff9d00;
+}
+
+.navigation-buttons{
+    height: 35%;
+}
+
+
+.navigation-icons > i{
+    color: #ffc40080;
+    font-size: 22px;
+}
+
+/*/*//*/*//*/*//*/*//*/*//* navigation bar */
+/*/*//*/*//*/*//*/*//*/*//* center tile */
+
+#main-tile{
+    transition: 1s ease-in-out;
+    height: 80%;
+    width: 62rem;
+    background-color: var(--cards-color);
+}
+
+.name{
+    line-height: 3rem;
+    margin-bottom: -5rem;
+}
+
+.WEB-DESIGNER{
+    color: #ff9d00;
+}
+
+.main-name{
+    letter-spacing: -2px;
+    color: #ff9d00;
+}
+
+.name-inner{
+    letter-spacing: -2px;
+    font-size: 2.5rem;
+}
+
+.welcome-text{
+    font-size:2.5rem;
+}
+
+.name-side-image{
+    width: 20rem;
+    height: auto;
+}
+
+/*/*//*/*//*/*//*/*//*/*//* center tile */
+/*/*//*/*//*/*//*/*//*/*//* side bar */
+
+#sidebar{
+    width: 5.5rem;
+    height: 80%;
+    overflow: hidden;
+    background-color: var(--cards-color);
+}
+
+.sidebar-container-timedate{
+    height: 7rem;
+}
+
+.date{
+    color: #ff9d00;
+    font-size: 1.5rem;
+}
+
+.month{
+    color: #ffffff;
+    font-size: 18px;   
+}
+.year{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.follow-me{
+    height: 23rem;
+}
+
+.follow-text{
+    opacity: 80%;
+    margin-top: 4rem;
+    width: 10rem;
+    transform: rotateZ(90deg);
+}
+
+.yellow-line{
+    height: 3px;
+    width: 5rem;
+    background-color: #ff9d00;
+}
+
+.social-icons-wrap{
+    height: 5rem;
+    font-size: 20px;
+}
+
+.up-down-buttons{
+    height: 10rem;
+}
+.upbutton-wrap,
+.downbutton-wrap{
+    border-radius: 10px;
+    padding: 0.7rem;
+    border: 2px solid #ff9d00;
+    color: #ff9d00;
+}
+
+
+
+/*/*//*/*//*/*//*/*//*/*//* side bar */

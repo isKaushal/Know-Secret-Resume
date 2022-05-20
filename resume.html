@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/sceond-tile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="/dist/output.css" rel="stylesheet">
+    
+    <title>Document</title>
+</head>
+<!-- d flex -->
+<body>
+ <!-- grid grid-cols-9  -->
+ <div class="main conatainer flex h-screen w-screen justify-center items-center">
+     <!-- navigation bar -->
+
+        <div id="navigation" class="container rounded-2xl col-span-1 ">
+            <div class="image-wrap grid w-full py-10 justify-center items-center">
+                <img class="rounded-full w-44" src="image/profile-img.jpg" alt="">
+                <h1 class="w-full text-white text-center text-4xl " >Alex Martin</h1>
+                <button class="button rounded-full py-3 text-white text-xl ">Download CV</button>
+            </div>
+            <div class="navigation-buttons w-full px-5 justify-center items-center">
+                <div class="navigation-button-wrap w-full flex h-2/4">
+                    <div id="home" class="navigation-icons flex items-center justify-center w-full">
+                        <i  class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <div  id="user" class="navigation-icons flex items-center justify-center w-full">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="navigation-icons flex items-center justify-center w-full">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                </div>
+                <div class="navigation-button-wrap w-full flex h-2/4">
+                    <div class="navigation-icons flex items-center justify-center w-full">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <div class="navigation-icons flex items-center justify-center w-full">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <div class="navigation-icons flex items-center justify-center w-full">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+ 
+     <!-- center tile -->
+     <!-- flex -->
+     <!-- <div id="main-tile"  class="container rounded-2xl flex col-span-8 items-center  ">
+         <div class="name-conatiner w-full px-10 flex justify-between items-center">
+             <div class="name ">
+                 <h2 class="WEB-DESIGNER">WEB DESIGNER</h2>
+                 <h1 class="name-inner text-white ">Hello , I’m <span class="main-name">Alex Martin</span></h1>
+                 <h1 class="welcome-text text-white ">Welcome to my World.</h1>
+                </div>
+                <div class="image ">
+                    <img class="name-side-image" src="image/download.png" alt="">
+                </div>
+         </div>
+        </div> -->
+
+        <!-- center tile -->
+        <!-- center tile 2 -->
+        
+        <div id="main-tile2"  class="container rounded-2xl mx-4 p-7 col-span-7 overflow-hidden ">
+            <div class="main-tile2-content-wrap w-full h-full container overflow-y-scroll ">
+                <saction class="container flex " >
+                    <div class="container w-2/5  h-5/6 flex justify-center items-center  "> 
+                       <div class="image-wrap2 w-96 rounded-t-3xl rounded-bl-3xl "> 
+                           <img class="second-image w-96 rounded-t-3xl rounded-bl-3xl  " src="image/about-img.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="container w-3/5 h-5/6 pt-20"> 
+                        <h1 class=" text-white text-4xl" >A short story about me , my mission,<br> thinking and craft.</h1>
+                        <p class="text-white text-md my-5 " >I’m a web designer who aware of the tiny moments in a persons life that reveal <br>  greater truths.  Aliquam erat volutpat. Nullam imperdiet sapien felis, <br>   non lobortis odio mattis in. Quisque dapibus aliquet dictum. <br> Integer dapibus ullamcorper est, ac .</p>
+                        <div class="cotainer grid grid-cols-2 text-white">
+                            <ul class="list-item">
+                                <li>Date Of Birth:- <small>15-11-1984 </small></li>
+                                <li>Address:- <small>Nirman Nagar Jaipur </small></li>
+                                <li>Pin code:- <small>302016 </small></li>
+                            </ul>
+                            <ul class="list-item">
+                                <li>Email Id:- <small>Deemmoo@gmailcom </small></li>
+                                <li>Contact No:- <small>9829457577 </small></li>
+                                <li>Alternative No:- <small>7728057577 </small></li>
+                            </ul>
+                        </div>
+                        <button class="button px-8 py-3 rounded-full my-10 text-white  text-xl" >Hire me</button>
+                    </div>
+                </saction>
+                <scation class="container relative">
+                    <div class="hobbies-wrap container w-full h-36 grid grid-cols-5">
+                        <div class="hobbies  container w-full h-36 grid col-span-1 justify-center items-center py-6 ">
+                            <i class=" text-center fa-solid fa-music"></i>
+                            <h1 class=" text-white text-xl " >Music</h1>
+                        </div>
+                        <div class="hobbies  container w-full h-36 grid col-span-1 justify-center items-center py-6 ">
+                            <i class=" text-center fa-solid fa-plane-departure"></i>
+                            <h1 class=" text-white text-xl " >Travel</h1>
+                        </div>
+                        <div class="hobbies  container w-full h-36 grid col-span-1 justify-center items-center py-6 ">
+                            <i class=" text-center fa-solid fa-tv"></i>
+                            <h1 class=" text-white text-xl " >Movie</h1>
+                        </div>
+                        <div class="hobbies  container w-full h-36 grid col-span-1 justify-center items-center py-6 ">
+                            <i class=" text-center fa-solid fa-baseball-bat-ball"></i>
+                            <h1 class=" text-white text-xl " >Sports</h1>
+                        </div>
+                        <div class="hobbies  container w-full h-36 grid col-span-1 justify-center items-center py-6 ">
+                            <i class=" text-center fa-solid fa-book-open"></i>
+                            <h1 class=" text-white text-xl " >Rading</h1>
+                        </div>
+                    </div>
+                </scation>
+                <saction class="sills grid grid-cols-2  h-72  w-full">
+                    <div class=" w-full col-span-1 py-10 px-3 ">
+                        <h1 class=" text-white text-4xl " >I have been able to experience & <br> developing this type of skill.</h1>
+                        <p class=" text-white text-lg mt-8 ">I was doing everything in my power to provide me with all the experiences to provide cost-effective and high quality products to satisfy my customers all over the world</p>
+                    </div>
+                    <div class=" h-full  w-full col-span-1 py-10 px-10 ">
+                        <ul class="text-white flex items-center  text-xl ">
+                            <div class="dots rounded-full w-2 h-2 m-5"></div>
+                            <li class="" >Computer:- value</li>
+                        </ul>
+                        <ul class="text-white flex items-center  text-xl ">
+                            <div class="dots rounded-full w-2 h-2 m-5"></div>
+                            <li class="" >Language:- value</li>
+                        </ul>
+                        <ul class="text-white flex items-center  text-xl ">
+                            <div class="dots rounded-full w-2 h-2 m-5"></div>
+                            <li class="" >Sports:- value</li>
+                        </ul>
+                        <ul class="text-white flex items-center  text-xl ">
+                            <div class="dots rounded-full w-2 h-2 m-5"></div>
+                            <li class="" >Photography:- value</li>
+                        </ul>
+                        <ul class="text-white flex items-center  text-xl ">
+                            <div class="dots rounded-full w-2 h-2 m-5"></div>
+                            <li class="" >Others:- value</li>
+                        </ul>
+                    </div>
+                </saction>
+            </div>
+        </div>
+        
+        <!-- center tile 2 -->
+        <!-- side bar -->
+        <!-- no display -->
+        <div id="sidebar" class="container  rounded-2xl overflow-hidden col-span-1 ">
+            <!-- TIME IN JS -->
+            <div id="sidebar-container-timedate" class="sidebar-container-timedate grid text-center p-2"></div>
+            <!-- TIME IN JS -->
+            <div class="follow-me text-center justify-center items-center grid">
+                <div class="follow-text flex justify-between items-center text-white" >
+                <!--Do  Not Remove-->Follow Me
+                    <div class="yellow-line  "></div>
+                </div>
+                <div class="social-icons-wrap grid justify-center items-start text-white">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-solid fa-at"></i>
+                </div>
+            </div>
+            <div class="up-down-buttons py-5 grid justify-center items-center">
+                <div class="upbutton-wrap flex justify-center items-center" >
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="downbutton-wrap flex justify-center items-center">
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/sidebar.js"></script>
+    <script src="js/navigation.js"></script>
+</body>
+</html>
