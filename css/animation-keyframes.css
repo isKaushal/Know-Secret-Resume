@@ -1,0 +1,14 @@
+.animate{
+    animation: animation-one 0.8s linear infinite;
+}
+.animate-reverse{
+    animation: animation-one 0.8s linear reverse infinite;
+}
+
+@keyframes animation-one {
+    0%{transform: scale(1); opacity: 1;}
+    100%{transform: scale(0);opacity: 0; }
+}
+
+
+

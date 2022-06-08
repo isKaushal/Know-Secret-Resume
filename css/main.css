@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: 1s ease-in-out;
 }
 
 html{
@@ -15,11 +17,15 @@ html{
 
 :root{
   
+    --cards-color: #4e4d4d;
     --cards-color: #272727;
     --text-color: #ffffff;
-    --icons--color: rgb(255, 157, 0);
+    --Yellow--color: #ff9d00;
+    --transition--: 1s ease-in-out;
 
 }
+
+
 
 .main{
     background-color: rgb(27, 27, 27);
@@ -29,9 +35,9 @@ html{
 /*/*//*/*//*/*//*/*//*/*//* navigation bar */
 
 #navigation{
-    transition: 1s ease-in-out;
+    transition: var(--transition--);
     width: 20rem;
-    height: 80%;
+    height: 85%;
     background-color: var(--cards-color);
 }
 
@@ -40,25 +46,52 @@ html{
 }
 
 .button{
-    background-color: #ff9d00;
+    background-color: var(--Yellow--color);
 }
 
 .navigation-buttons{
     height: 35%;
 }
 
+.navigation-icons:hover .nav-titles{
+    transform: translateY(0rem);
+    opacity: 1;
+}
+
+.navigation-icons:hover .navicons{
+    transform: translateY(-0.5rem);
+}
 
 .navigation-icons > i{
+    font-size: 20px;
+    color: var(--Yellow--color);
+    
+}
+
+.nav-titles{
+    transform: translateY(-0.5rem);
+    opacity: 0;
+    transition: 0.5s ease-in-out ;
+}
+.navicons{
+    transform: translateY(0rem);
+    transition: 0.5s ease-in-out ;
+}
+
+
+
+.user-email,
+.user-phone,
+.user-address > i{
     color: #ffc40080;
-    font-size: 22px;
 }
 
 /*/*//*/*//*/*//*/*//*/*//* navigation bar */
 /*/*//*/*//*/*//*/*//*/*//* center tile */
 
 #main-tile{
-    transition: 1s ease-in-out;
-    height: 80%;
+    transition: var(--transition--);
+    height: 85%;
     width: 62rem;
     background-color: var(--cards-color);
 }
@@ -69,12 +102,12 @@ html{
 }
 
 .WEB-DESIGNER{
-    color: #ff9d00;
+    color: var(--Yellow--color);
 }
 
 .main-name{
     letter-spacing: -2px;
-    color: #ff9d00;
+    color: var(--Yellow--color);
 }
 
 .name-inner{
@@ -96,18 +129,14 @@ html{
 
 #sidebar{
     width: 5.5rem;
-    height: 80%;
-    overflow: hidden;
+    height: 85%;
     background-color: var(--cards-color);
 }
 
-.sidebar-container-timedate{
-    height: 7rem;
-}
-
 .date{
-    color: #ff9d00;
-    font-size: 1.5rem;
+    color: var(--Yellow--color);
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
 .month{
@@ -117,10 +146,6 @@ html{
 .year{
     color: #ffffff;
     font-size: 20px;
-}
-
-.follow-me{
-    height: 23rem;
 }
 
 .follow-text{
@@ -133,7 +158,7 @@ html{
 .yellow-line{
     height: 3px;
     width: 5rem;
-    background-color: #ff9d00;
+    background-color: var(--Yellow--color);
 }
 
 .social-icons-wrap{
@@ -141,17 +166,24 @@ html{
     font-size: 20px;
 }
 
-.up-down-buttons{
-    height: 10rem;
-}
 .upbutton-wrap,
 .downbutton-wrap{
     border-radius: 10px;
     padding: 0.7rem;
-    border: 2px solid #ff9d00;
-    color: #ff9d00;
+    border: 2px solid var(--Yellow--color);
+    color: var(--Yellow--color);
+}
+
+/* transitions */
+
+.na-name,
+.nav-image,
+.navigation-icons,
+.navigation-button-wrap{
+    transition: var(--transition--);
 }
 
 
+/* transitions */
 
 /*/*//*/*//*/*//*/*//*/*//* side bar */
