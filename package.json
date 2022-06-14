@@ -4,8 +4,12 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "animejs": "^3.2.1",
+    "install": "^0.13.0",
     "jquery": "^3.6.0",
+    "kute.js": "^2.2.2",
     "owl.carousel": "^2.3.4",
+    "smooth-scrollbar": "^8.7.4",
     "tw-elements": "^1.0.0-alpha12"
   }
 }

@@ -36,7 +36,6 @@ html{
 
 #navigation{
     transition: var(--transition--);
-    width: 20rem;
     height: 85%;
     background-color: var(--cards-color);
 }
@@ -53,32 +52,42 @@ html{
     height: 35%;
 }
 
-.navigation-icons:hover .nav-titles{
-    transform: translateY(0rem);
-    opacity: 1;
-}
-
-.navigation-icons:hover .navicons{
-    transform: translateY(-0.5rem);
-}
 
 .navigation-icons > i{
     font-size: 20px;
-    color: var(--Yellow--color);
+    color: #ffc40080;
     
 }
 
 .nav-titles{
-    transform: translateY(-0.5rem);
+    transform: translateY(-4px);
     opacity: 0;
-    transition: 0.5s ease-in-out ;
+    transition: 0.3s ease-in-out ;
 }
 .navicons{
-    transform: translateY(0rem);
-    transition: 0.5s ease-in-out ;
+    transform: translateY(0px);
+    transition: 0.3s ease-in-out ;
 }
 
 
+.navigation-icons:hover .nav-titles{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.navigation-icons:hover .navicons{
+    transform: translateY(-4px);
+}
+
+/* js class toggles */
+
+.nav-titles-hover{
+    transition: 0.3s ease-in-out ;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/* js class toggles */
 
 .user-email,
 .user-phone,
@@ -89,12 +98,9 @@ html{
 /*/*//*/*//*/*//*/*//*/*//* navigation bar */
 /*/*//*/*//*/*//*/*//*/*//* center tile */
 
-#main-tile{
-    transition: var(--transition--);
-    height: 85%;
-    width: 62rem;
-    background-color: var(--cards-color);
-}
+/* /////////////////////////////////////*/
+/* maintile in animation key frames css */
+/* //////////////////////////////////// */
 
 .name{
     line-height: 3rem;
@@ -183,7 +189,5 @@ html{
     transition: var(--transition--);
 }
 
-
-/* transitions */
 
 /*/*//*/*//*/*//*/*//*/*//* side bar */
