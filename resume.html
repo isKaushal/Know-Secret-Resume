@@ -4,20 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- <script src="/js/tailwindcss.js"></script> -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="image/coll-01.png" type="image/x-icon">
+    
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/center-tile.css" />
     <link rel="stylesheet" type="text/css" href="css/owl.css" />
-    <link rel="stylesheet" type="text/css" href="resposive.css" />
+    <link rel="stylesheet" type="text/css" href="css/resposive.css" />
     <link rel="stylesheet" type="text/css" href="css/animation-keyframes.css" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/css/all.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 
     <link
       rel="stylesheet"
@@ -26,7 +29,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="/dist/output.css" rel="stylesheet" />
 
     <link
       rel="stylesheet"
@@ -45,470 +47,830 @@
 
     <title>Resume</title>
   </head>
-  <!-- d flex -->
   <body>
-    <!-- grid grid-cols-9  -->
-      <div class="main h-screen justify-center items-center p-3 md:p-3 lg:p-5 lg:flex overflow-hidden relative">
-        <div class="nav-button w-full h-[8%] flex justify-end relative lg:hidden">
-          <div class="logo"></div>
-          <div onclick="NavToggle()"  class="nav-button-inner bg-[#4b4b4b] flex justify-center z-10 items-center w-[3rem] h-[3rem] rounded-2xl ">
-            <i class="fa-solid fa-bars text-2xl  text-[#ff9d00]  "></i>
+    <div
+      class="main justify-center items-center p-3 md:p-3 lg:p-8 lg:w-[65rem] lg:flex overflow-hidden relative"
+    >
+      <div
+        class="nav-button w-full h-[10%] flex justify-between items-center relative lg:hidden"
+      >
+        <img src="image/logo.png" alt="" />
+        <div
+          onclick="NavToggle()"
+          class="nav-button-inner bg-[#4b4b4b] flex justify-center z-10 items-center w-[3rem] h-[3rem] rounded-2xl"
+        >
+          <i class="fa-solid fa-bars text-2xl text-[#ff9d00]"></i>
+        </div>
+      </div>
+      <div class="main-inner w-[100%] h-[90%] flex justify-center items-center">
+        <!-- navigation bar -->
+        <div
+          id="navigation"
+          class="navbar w-screen h-screen overflow-hidden absolute lg:rounded-2xl lg:h-[100%] lg:w-80 lg:relative"
+        >
+          <div
+            id="image-wrap"
+            class="image-wrap grid py-5 justify-center items-center"
+          >
+            <div class="nav-Image-wrap w-full flex justify-center items-center">
+              <img
+                id="navImage"
+                class="nav-image rounded-full lg:w-44"
+                alt=""
+                src=" image/profile-img.jpg"
+              />
+            </div>
+            <h1
+              id="navigation-name"
+              class="na-name w-full text-white text-center text-4xl"
+            >
+              Alex Martin
+            </h1>
+            <button
+              id="nav-button"
+              class="button rounded-full py-3 text-white text-xl lg:hidden"
+            >
+              Download CV
+            </button>
+          </div>
+          <div
+            id="navigation-buttons"
+            class="navigation-buttons w-full justify-center p-2 items-center grid"
+          >
+            <div
+              id="navigation-button-wrap"
+              class="navigation-button-wrap w-full grid justify-center items-center grid-cols-3 h-2/4"
+            >
+              <div
+                id="home"
+                class="navigation-icons cursor-pointer gsap1 w-[100%] p-4 items-center grid justify-center items-center col-span-1 h-[100%]"
+              >
+                <i
+                  class="navicons flex w-full justify-center fa-solid fa-house"
+                ></i>
+                <small
+                  id="hometitle"
+                  class="nav-titles text-[#b0b0b0] text-center mt-1 font-bold"
+                  >Home</small
+                >
+              </div>
+              <div
+                id="user"
+                class="navigation-icons cursor-pointer gsap1 w-[100%] p-4 items-center grid justify-center items-center col-span-1 h-[100%]"
+              >
+                <i
+                  class="navicons flex w-full justify-center fa-solid fa-user"
+                ></i>
+                <small
+                  id="usertitle"
+                  class="nav-titles text-[#b0b0b0] text-center mt-1 font-bold"
+                  >About</small
+                >
+              </div>
+              <div
+                id="clipbord"
+                class="navigation-icons cursor-pointer gsap1 w-[100%] p-4 items-center grid justify-center items-center col-span-1 h-[100%]"
+              >
+                <i
+                  class="navicons flex w-full justify-center fa-solid fa-clipboard-check"
+                ></i>
+                <small
+                  id="clipbordtitle"
+                  class="nav-titles text-[#b0b0b0] text-center mt-1 font-bold"
+                  >Resume</small
+                >
+              </div>
+            </div>
+            <div
+              id="navigation-button-wrap"
+              class="navigation-button-wrap w-full grid justify-center items-center grid-cols-3 h-2/4"
+            >
+              <div
+                id="openbook"
+                class="navigation-icons cursor-pointer gsap2 w-[100%] p-4 items-center grid justify-center items-center col-span-1 h-[100%]"
+              >
+                <i
+                  class="navicons flex w-full justify-center fa-solid fa-book-open"
+                ></i>
+                <small
+                  id="openbooktitle"
+                  class="nav-titles text-[#b0b0b0] text-center mt-1 font-bold"
+                  >Images</small
+                >
+              </div>
+              <div
+                id="whatsapp"
+                class="navigation-icons cursor-pointer gsap2 w-[100%] p-4 items-center grid justify-center items-center col-span-1 h-[100%]"
+              >
+                <i
+                  class="navicons flex w-full justify-center fa-brands fa-whatsapp font-black"
+                ></i>
+                <small
+                  class="nav-titles text-[#b0b0b0] text-center mt-1 font-bold"
+                  >Whatsapp</small
+                >
+              </div>
+              <div
+                id="location"
+                class="navigation-icons cursor-pointer gsap2 w-[100%] p-4 items-center grid justify-center items-center col-span-1 h-[100%]"
+              >
+                <i
+                  class="navicons flex w-full justify-center fa-solid fa-location-dot"
+                ></i>
+                <small
+                  id="locationtitle"
+                  class="nav-titles text-[#b0b0b0] text-center mt-1 font-bold"
+                  >Contact</small
+                >
+              </div>
+            </div>
           </div>
         </div>
-        <div class="main-inner w-[100%] h-[92%] flex justify-center items-center ">
-          <!-- navigation bar -->
-               <div id="navigation" class="navbar w-screen h-screen overflow-hidden absolute lg:rounded-2xl lg:h-[85%] lg:w-80  lg:relative ">
-                  <div id="image-wrap"  class="image-wrap grid  py-5 justify-center items-center">
-                      <div class="nav-Image-wrap w-full flex justify-center items-center">
-                          <img id="navImage"  class="nav-image  rounded-full w-44" src="image/profile-img.jpg" alt="">
-                      </div>
-                      <h1 id="navigation-name" class="na-name  w-full text-white text-center text-4xl " >Alex Martin</h1>
-                      <button id="nav-button" class="button rounded-full py-3 text-white text-xl ">Download CV</button>
-                  </div>
-                  <div id="navigation-buttons"  class=" navigation-buttons w-full justify-center p-2 items-center grid ">
-                      <div id="navigation-button-wrap" class="navigation-button-wrap w-full grid justify-center items-center  grid-cols-3  h-2/4">
-                          <div id="home" class="  navigation-icons cursor-pointer  gsap1 w-[100%] p-4 items-center grid justify-center items-center  col-span-1 h-[100%]  ">
-                              <i class=" navicons   flex w-full justify-center fa-solid fa-house"></i>
-                              <small id="hometitle"  class=" nav-titles text-white  text-center mt-1 font-bold " >Home</small>
-                          </div>
-                          <div  id="user" class="navigation-icons cursor-pointer  gsap1 w-[100%] p-4 items-center grid justify-center items-center  col-span-1 h-[100%]  ">
-                              <i class=" navicons   flex w-full justify-center fa-solid fa-user"></i>
-                              <small id="usertitle" class=" nav-titles text-white  text-center mt-1 font-bold " >About</small>
-                          </div>
-                          <div id="clipbord" class="navigation-icons cursor-pointer  gsap1  w-[100%] p-4 items-center grid  justify-center items-center  col-span-1 h-[100%]  ">
-                              <i class=" navicons   flex w-full justify-center fa-solid fa-clipboard-check"></i>
-                              <small id="clipbordtitle" class=" nav-titles text-white  text-center mt-1 font-bold " >Resume</small>
-                          </div>
-                      </div>
-                      <div  id="navigation-button-wrap" class="navigation-button-wrap w-full grid justify-center items-center grid-cols-3  h-2/4">
-                          <div id="openbook" class="navigation-icons cursor-pointer  gsap2  w-[100%] p-4 items-center grid  justify-center items-center  col-span-1 h-[100%]  ">
-                              <i class=" navicons   flex w-full justify-center fa-solid fa-book-open"></i>
-                              <small id="openbooktitle" class=" nav-titles text-white  text-center mt-1 font-bold " >Images</small>
-                          </div>
-                          <div id="whatsapp" class="navigation-icons cursor-pointer  gsap2  w-[100%] p-4 items-center grid  justify-center items-center  col-span-1 h-[100%]  ">
-                              <i class=" navicons   flex w-full justify-center fa-brands fa-whatsapp font-black"></i>
-                              <small class=" nav-titles text-white  text-center mt-1 font-bold " >Whatsapp</small>
-                          </div>
-                          <div id="location" class="navigation-icons cursor-pointer  gsap2  w-[100%] p-4 items-center grid  justify-center items-center  col-span-1 h-[100%]  ">
-                              <i class=" navicons   flex w-full justify-center fa-solid fa-location-dot"></i>
-                              <small id="locationtitle" class=" nav-titles text-white  text-center mt-1 font-bold " >Contact</small>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          <!-- remove grid cols  -->
-          <!-- add icons height  -->
-          <div id="center-tiles-wrap" class="tiles-wrap center-tiles-wrap w-full lg:h-[85%] lg:w-[62rem] lg:mx-4 h-[100%] flex justify-center items-center relative  " >
-            <!-- center tile -->
-            <div id="MainTile1"  class="MainTile1 grid py-14 lg:p-5   container  w-full rounded-2xl bg-white  items-center absolute lg:flex ">
-  
-              <div class="MainTile1-image-wrap grid items-center lg:hidden">
-                <div class="MainTile1-image-wrap-inner overflow-hidden w-full justify-center flex ">
-                  <img class="MainTile1-image rounded-full  w-44 h-44 "  src="image/profile-img.jpg" alt="">
-                </div>
-              </div>
-              
-              <div class="name-conatiner w-full px-10   justify-between items-center h-40  lg:h-[60%] lg:flex ">
-                <div class="name">
-                  <h2 class="WEB-DESIGNER text-center lg:text-left ">WEB DESIGNER</h2>
-                  <h1 class="name-inner text-white text-center lg:text-left  text-[25px] lg:text-[30px]">Hello , I’m <span class="main-name">Alex Martin</span></h1>
-                  <h1 class="welcome-text text-white text-center text-[25px] lg:text-left lg:text-[30px]">Welcome to my World.</h1>
-                </div>
-                <div class="image ">
-                  <img class="name-side-image hidden lg:block" src="image/download.png" alt="">
-                </div>
-              </div>
-              <div class="MainTile1-image-wrap-inner overflow-hidden w-full justify-center flex lg:hidden">
-                <button id="nav-button-mobile " class="button my-4  rounded-full  px-3 py-3 text-white text-xl ">Download CV</button>
+        <!-- remove grid cols  -->
+        <!-- add icons height  -->
+        <div
+          id="center-tiles-wrap"
+          class="tiles-wrap center-tiles-wrap w-full lg:h-[100%] lg:w-[40rem] xl:w-[50rem] lg:mx-4 h-[100%] flex justify-center items-center relative"
+        >
+          <!-- center tile -->
+          <div
+            id="MainTile1"
+            class="MainTile1 grid py-14 lg:p-5 container w-full rounded-2xl bg-white items-center absolute lg:flex"
+          >
+            <div class="MainTile1-image-wrap grid items-center lg:hidden">
+              <div
+                class="MainTile1-image-wrap-inner overflow-hidden w-full justify-center flex"
+              >
+                <img
+                  class="MainTile1-image rounded-full w-44 h-44"
+                  src="image/profile-img.jpg"
+                  alt=""
+                />
               </div>
             </div>
-  
-            <!-- center tile end -->
-            <!-- center tile 2 -->
-  
-            <div id="MainTile2" class="container rounded-2xl   p-7 col-span-7 overflow-hidden absolute ">
-                  <div class="main-tile2-content-wrap w-full h-full container overflow-y-scroll ">
-                      <saction class="container grid lg:flex " >
-                          <div class="container w-full lg:w-2/5  lg:h-5/6 flex justify-center items-center  "> 
-                              <div class="image-wrap2 w-44  lg:w-96 rounded-t-3xl rounded-bl-3xl "> 
-                                  <img class="second-image lg:w-96 rounded-t-3xl rounded-bl-3xl  " src="image/about-img.jpg" alt="">
-                              </div>
-                          </div>
-                          <div class="container w-full  lg:w-3/5 lg:h-5/6 py-14"> 
-                              <h1 class=" text-white text-4xl text-[25px] " >A short story about me , my mission,<br> thinking and craft.</h1>
-                              <p class="text-white text-md my-5 " >I’m a web designer who aware of the tiny moments in a persons life that reveal <br>  greater truths.  Aliquam erat volutpat. Nullam imperdiet sapien felis, <br>   non lobortis odio mattis in. Quisque dapibus aliquet dictum. <br> Integer dapibus ullamcorper est, ac .</p>
-                              <div class="cotainer lg:grid lg:grid-cols-2 text-white">
-                                  <ul class="list-item">
-                                      <li>Date Of Birth:- <small>15-11-1984 </small></li>
-                                      <li>Address:- <small>Nirman Nagar Jaipur </small></li>
-                                      <li>Pin code:- <small>302016 </small></li>
-                                  </ul>
-                                  <ul class="list-item">
-                                      <li>Email Id:- <small>Deemmoo@gmailcom </small></li>
-                                      <li>Contact No:- <small>9829457577 </small></li>
-                                      <li>Alternative No:- <small>7728057577 </small></li>
-                                  </ul>
-                              </div>
-                              <button  class="button px-8 py-3 rounded-full my-5 text-white  text-xl" >Hire me</button>
-                          </div>
-                      </saction>
-                      <scation class="container relative">
-                          <div class="hobbies-wrap container w-full lg:h-36 grid lg:grid-cols-5 ">
-                              <div class="hobbies  container w-full h-36 grid col-span-1 justify-center items-center py-6 ">
-                                  <i class=" text-center fa-solid fa-music"></i>
-                                  <h1 class=" text-white text-xl " >Music</h1>
-                              </div>
-                              <div class="hobbies  container w-full h-36 grid col-span-1 justify-center items-center py-6 ">
-                                  <i class=" text-center fa-solid fa-plane-departure"></i>
-                                  <h1 class=" text-white text-xl " >Travel</h1>
-                              </div>
-                              <div class="hobbies  container w-full h-36 grid col-span-1 justify-center items-center py-6 ">
-                                  <i class=" text-center fa-solid fa-tv"></i>
-                                  <h1 class=" text-white text-xl " >Movie</h1>
-                              </div>
-                              <div class="hobbies  container w-full h-36 grid col-span-1 justify-center items-center py-6 ">
-                                  <i class=" text-center fa-solid fa-baseball-bat-ball"></i>
-                                  <h1 class=" text-white text-xl " >Sports</h1>
-                              </div>
-                              <div class="hobbies  container w-full h-36 grid col-span-1 justify-center items-center py-6 ">
-                                  <i class=" text-center fa-solid fa-book-open"></i>
-                                  <h1 class=" text-white text-xl " >Rading</h1>
-                              </div>
-                          </div>
-                      </scation>
-                      <saction class="skills grid lg:grid-cols-2  lg:h-72  w-full ">
-                          <div class=" w-full col-span-1 py-10 px-3 ">
-                              <h1 class=" text-white text-4xl " >I have been able to experience & <br> developing this type of skill.</h1>
-                              <p class=" text-white text-lg mt-8 ">I was doing everything in my power to provide me with all the experiences to provide cost-effective and high quality products to satisfy my customers all over the world</p>
-                          </div>
-                          <div class=" lg:h-full  w-full col-span-1 p-5 lg:p-10">
-                              <ul class="text-white flex items-center  text-xl ">
-                                  <div class="dots1  rounded-full w-2 h-2 m-5"></div>
-                                  <li>Computer:- value</li>
-                              </ul>
-                              <ul class="text-white flex items-center  text-xl ">
-                                  <div class="dots2  rounded-full w-2 h-2 m-5"></div>
-                                  <li>Language:- value</li>
-                              </ul>
-                              <ul class="text-white flex items-center  text-xl ">
-                                  <div class="dots3  rounded-full w-2 h-2 m-5"></div>
-                                  <li>Sports:- value</li>
-                              </ul>
-                              <ul class="text-white flex items-center  text-xl ">
-                                  <div class="dots4  rounded-full w-2 h-2 m-5"></div>
-                                  <li>Photography:- value</li>
-                              </ul>
-                              <ul class="text-white flex items-center  text-xl ">
-                                  <div class="dots5  rounded-full w-2 h-2 m-5"></div>
-                                  <li>Others:- value</li>
-                              </ul>
-                          </div>
-                      </saction>
-                      <saction id="relode"  class="w-full h-[15rem] flex justify-center items-center overflow-hidden  " >
-                        <div class="slider-wrap w-full lg:w-[45rem] h-full justify-center items-center ">
-                          <div class=" awards-slider owl-carousel owl-theme flex justify-center items-center  ">
-                              <div class="text-center text-white ">
-                                  <div class="awards-image-wrap flex w-full justify-center items-center  ">
-                                      <div class="award-images w-20 h-20 rounded-full bg-white mb-2  "></div>
-                                  </div>
-                                  <h1 class=" text-3xl " >AWARD NAME</h1>
-                                  <p class="px-5"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit soluta dolorem  veniam nulla iusto ipsum,facere unde. Id</p>
-                              </div>
-                              <div class="text-center text-white ">
-                                  <div class="awards-image-wrap flex w-full justify-center items-center  ">
-                                      <div class="award-images w-20 h-20 rounded-full bg-white mb-2  "></div>
-                                  </div>
-                                  <h1 class=" text-3xl " >AWARD NAME</h1>
-                                  <p class="px-5"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit soluta dolorem  veniam nulla iusto ipsum,facere unde. Id</p>
-                              </div>
-                              <div class="text-center text-white ">
-                                  <div class="awards-image-wrap flex w-full justify-center items-center  ">
-                                      <div class="award-images w-20 h-20 rounded-full bg-white mb-2  "></div>
-                                  </div>
-                                  <h1 class=" text-3xl " >AWARD NAME</h1>
-                                  <p class="px-5"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit soluta dolorem  veniam nulla iusto ipsum,facere unde. Id</p>
-                              </div>
-                          </div>
-                        </div>
-                      </saction>
-                  </div>
+
+            <div
+              class="name-conatiner w-full px-10 justify-between items-center h-40 lg:h-[60%] lg:flex"
+            >
+              <div class="name">
+                <h2 class="WEB-DESIGNER text-center lg:text-left uppercase">
+                  WEB DESIGNER
+                </h2>
+                <h1
+                  class="name-inner text-white text-center lg:text-left text-[25px] lg:text-[30px]"
+                >
+                  Hello , I’m <span class="main-name">Alex Martin</span>
+                </h1>
+                <h1
+                  class="welcome-text text-white text-center text-[25px] lg:text-left lg:text-[30px]"
+                >
+                  Welcome to my World.
+                </h1>
               </div>
-  
-            <!-- center tile 2 end -->
-            <!-- center tile 3 -->
-  
-              <div id="MainTile3"  class="container rounded-2xl p-7 absolute flex justify-center items-center overflow-hidden">
-                <div class="custome-wrap h-full w-full lg:w-[60rem]">
-                  <div id="custome-owl"  class="custome-owl w-full h-full owl-carousel owl-theme justify-center items-center ">
-                      <saction class="education-wrap-outer justify-center items-center ">
-                          <div class="Education w-full h-10 lg:pl-4">
-                              <h1 class=" text-[#ff9d00] text-4xl my-2 ">Education</h1>
-                          </div>
-                          <div class="relative">
-                              <div id="Education-main" class="Education-main grid lg:grid-cols-1 mt-14 w-full  lg:h-full lg:overflow-y-scroll ">
-                                  <div class="education-wrap   w-full grid  lg:grid-cols-2 relative  ">
-                                      <div class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10  ">
-                                          <h1 class=" text-[#ff9d00] text-lg ">2012 - 2015</h1>
-                                          <h1 class=" text-white lg:text-2xl ">Art University - New York</h1>
-                                          <h1 class=" text-white lg:text-2xl ">Degree</h1>
-                                      </div> 
-                                      <div class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10  ">
-                                          <h1 class=" text-[#ff9d00] text-lg ">2012 - 2015</h1>
-                                          <h1 class=" text-white lg:text-2xl ">Art University - New York</h1>
-                                          <h1 class=" text-white lg:text-2xl ">Degree</h1>
-                                      </div>
-                                  </div>
-                                  <div class="education-wrap2 w-full  grid  lg:grid-cols-2 relative  ">
-                                      <div class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10  ">
-                                          <h1 class=" text-[#ff9d00] text-lg   ">2012 - 2015</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Art University - New York</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Degree</h1>
-                                      </div> 
-                                      <div class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10  ">
-                                          <h1 class=" text-[#ff9d00] text-lg   ">2012 - 2015</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Art University - New York</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Degree</h1>
-                                      </div>
-                                  </div>
-                                  <div class="education-wrap2 w-full  grid  lg:grid-cols-2 relative  ">
-                                      <div class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10  ">
-                                          <h1 class=" text-[#ff9d00] text-lg   ">2012 - 2015</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Art University - New York</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Degree</h1>
-                                      </div> 
-                                      <div class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10  ">
-                                          <h1 class=" text-[#ff9d00] text-lg   ">2012 - 2015</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Art University - New York</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Degree</h1>
-                                      </div>
-                                  </div>
-                                  <div class="education-wrap2 w-full  grid  lg:grid-cols-2 relative  ">
-                                      <div class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10  ">
-                                          <h1 class=" text-[#ff9d00] text-lg   ">2012 - 2015</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Art University - New York</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Degree</h1>
-                                      </div> 
-                                      <div class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10  ">
-                                          <h1 class=" text-[#ff9d00] text-lg   ">2012 - 2015</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Art University - New York</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Degree</h1>
-                                      </div>
-                                  </div>
-                                  <div class="education-wrap2 w-full  grid  lg:grid-cols-2 relative  ">
-                                      <div class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10  ">
-                                          <h1 class=" text-[#ff9d00] text-lg   ">2012 - 2015</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Art University - New York</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Degree</h1>
-                                      </div> 
-                                      <div class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10  ">
-                                          <h1 class=" text-[#ff9d00] text-lg   ">2012 - 2015</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Art University - New York</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Degree</h1>
-                                      </div>
-                                  </div>
-                                  <div class="education-wrap2 w-full  grid  lg:grid-cols-2 relative  ">
-                                      <div class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10  ">
-                                          <h1 class=" text-[#ff9d00] text-lg   ">2012 - 2015</h1> 
-                                          <h1 class=" text-white lg:text-2xl   ">Art University - New York</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Degree</h1>
-                                      </div> 
-                                      <div class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10  ">
-                                          <h1 class=" text-[#ff9d00] text-lg   ">2012 - 2015</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Art University - New York</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Degree</h1>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </saction>
-                      <saction class="education-wrap-outer justify-center items-center">
-                          <div class="Education w-full h-10 lg:pl-4 ">
-                              <h1 class=" text-[#ff9d00] text-4xl my-2 ">Experience</h1>
-                          </div>
-                          <div class="relative">
-                              <div id="Education-main" class="Education-main grid grid-cols-1 mt-14 w-full  h-full lg:overflow-y-scroll ">
-                                  <div class="education-wrap  w-full lg:grid  grid-cols-2 relative  ">
-                                      <div class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10  ">
-                                          <h1 class=" text-[#ff9d00] text-lg   ">2012 - 2015</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Art University - New York</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Degree</h1>
-                                      </div> 
-                                      <div class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10  ">
-                                          <h1 class=" text-[#ff9d00] text-lg   ">2012 - 2015</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Art University - New York</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Degree</h1>
-                                      </div>
-                                  </div>
-                                  <div class="education-wrap2 w-full  lg:grid  grid-cols-2 relative  ">
-                                      <div class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10  ">
-                                          <h1 class=" text-[#ff9d00] text-lg   ">2012 - 2015</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Art University - New York</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Degree</h1>
-                                      </div> 
-                                      <div class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10  ">
-                                          <h1 class=" text-[#ff9d00] text-lg   ">2012 - 2015</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Art University - New York</h1>
-                                          <h1 class=" text-white lg:text-2xl   ">Degree</h1>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </saction>
-                  </div>
-                </div>
+              <div class="image">
+                <img
+                  class="name-side-image hidden lg:block"
+                  src="/image/download.png"
+                  alt=""
+                />
               </div>
-            <!-- center tile end 3 -->
-            <!-- center tile  4 -->
-            <div id="MainTile4"  class="container rounded-2xl p-7 col-span-7 overflow-hidden">
-              <div class="main-tile4-content-wrap w-full h-full  overflow-hidden ">
-                  <div class="Testimonials-heading w-full h-[10%]  ">
-                      <h1 class=" text-[#ff9d00] text-4xl  " >Testimonials</h1>
-                  </div>
-                    <div class="TestimonialsSlider owl-carousel owl-theme  w-full h-full flex justify-between  items-center ">
-                        <div class="Testimonials-cards w-[90%] h-[90%] rounded-xl p-7 my-14  relative overflow-hidden ml-[1rem] ">
-                            <div class="icons-name-wrap w-full grid grid-cols-2 justify-between  ">
-                                <i class="fa-solid fa-quote-left z-10 "></i>
-                                <span class=" text-2xl text-center uppercase text-[#ff9d00] italic z-10  ">SHIKHA</span>
-                            </div>
-                            <div class="Testimonials-pharagraph-wrap z-20  ">
-                                <p class=" text-center w-full text-[#cec9c9] my-8   "  >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis facilis ipsa asperiores in accusamus officiis, molestiae vero necessitatibus voluptatem odio, laborum quos eligendi sapiente  </p>
-                            </div>
-                            <div class="Testimonials-images-wrap w-full bg-transparent flex justify-center items-center">
-                                <div class="Testimonials-image bg-white rounded-full w-20 h-20 z-10 overflow-hidden  "></div>
-                            </div>
-                        </div>
-                        <div class="Testimonials-cards w-[90%] h-[90%] rounded-xl p-7 my-14  relative overflow-hidden ml-[1rem] ">
-                            <div class="icons-name-wrap w-full grid grid-cols-2 justify-between  ">
-                                <i class="fa-solid fa-quote-left z-10 "></i>
-                                <span class=" text-2xl text-center uppercase text-[#ff9d00] italic z-10  ">SHIKHA</span>
-                            </div>
-                            <div class="Testimonials-pharagraph-wrap z-20  ">
-                                <p class=" text-center w-full text-[#cec9c9] my-8   "  >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis facilis ipsa asperiores in accusamus officiis, molestiae vero necessitatibus voluptatem odio, laborum quos eligendi sapiente  </p>
-                            </div>
-                            <div class="Testimonials-images-wrap w-full bg-transparent flex justify-center items-center">
-                                <div class="Testimonials-image bg-white rounded-full w-20 h-20 z-10 overflow-hidden  "></div>
-                            </div>
-                        </div>
-                        <div class="Testimonials-cards w-[90%] h-[90%] rounded-xl p-7 my-14  relative overflow-hidden ml-[1rem] ">
-                            <div class="icons-name-wrap w-full grid grid-cols-2 justify-between  ">
-                                <i class="fa-solid fa-quote-left z-10 "></i>
-                                <span class=" text-2xl text-center uppercase text-[#ff9d00] italic z-10  ">SHIKHA</span>
-                            </div>
-                            <div class="Testimonials-pharagraph-wrap z-20  ">
-                                <p class=" text-center w-full text-[#cec9c9] my-8   "  >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis facilis ipsa asperiores in accusamus officiis, molestiae vero necessitatibus voluptatem odio, laborum quos eligendi sapiente  </p>
-                            </div>
-                            <div class="Testimonials-images-wrap w-full bg-transparent flex justify-center items-center">
-                                <div class="Testimonials-image bg-white rounded-full w-20 h-20 z-10 overflow-hidden  "></div>
-                            </div>
-                        </div>
-                        <div class="Testimonials-cards w-[90%] h-[90%] rounded-xl p-7 my-14  relative overflow-hidden ml-[1rem] ">
-                            <div class="icons-name-wrap w-full grid grid-cols-2 justify-between  ">
-                                <i class="fa-solid fa-quote-left z-10 "></i>
-                                <span class=" text-2xl text-center uppercase text-[#ff9d00] italic z-10  ">SHIKHA</span>
-                            </div>
-                            <div class="Testimonials-pharagraph-wrap z-20  ">
-                                <p class=" text-center w-full text-[#cec9c9] my-8   "  >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis facilis ipsa asperiores in accusamus officiis, molestiae vero necessitatibus voluptatem odio, laborum quos eligendi sapiente  </p>
-                            </div>
-                            <div class="Testimonials-images-wrap w-full bg-transparent flex justify-center items-center">
-                                <div class="Testimonials-image bg-white rounded-full w-20 h-20 z-10 overflow-hidden  "></div>
-                            </div>
-                        </div>
-                    </div>
-                  <div class="owl-nav2 px-10 ">
-                      <div class="owl-prev2"></div>
-                      <div class="owl-next2"></div>
-                  </div>
-              </div>
-              </div>
-  
-            <!-- center tile end 4 -->
-            <!-- center tile 5 -->
-  
-            <div id="MainTile5" class="container rounded-2xl col-span-8 p-7 absolute ">
-                  <div class="main-tile5-content-wrap overflow-y-scroll w-full h-full ">
-                  <saction>
-                      <div class="Education w-full h-14 pl-10">
-                        <h1 class="text-[#ff9d00] text-4xl my-2">Get In Touch</h1>
-                      </div>
-                  </saction>
-                  <saction class="grid lg:grid-cols-3" >
-                    <div class="social-items w-full h-[25rem] py-6 col-span-1  grid grid-rows-3 justify-center items-center  ">
-                      <div class="user-email grid grid-cols-3  justify-center items-center">
-                          <i class=" w-full justify-center items-center flex  text-4xl fa-regular fa-envelope-open"></i>
-                          <div class=" grid col-span-2  email-me">
-                              <h1 class="text-white text-2xl">Mail Me</h1>
-                              <small >email@example.com</small>
-                          </div>
-                      </div>
-                      <div class="user-phone grid grid-cols-3  justify-center items-center">
-                          <i class=" w-full justify-center items-center flex  text-4xl fa-solid fa-phone"></i>
-                          <div class=" grid col-span-2  call-me">
-                              <h1 class="text-white text-2xl " >Call Us</h1>
-                              <small >+91 0000000000</small>
-                          </div>
-                      </div>
-                      <div class="user-address grid grid-cols-3  justify-center items-center">
-                          <i class=" w-full justify-center items-center flex  text-4xl fa-regular fa-map"></i>
-                          <div class=" grid col-span-2  my-address">
-                              <h1 class="text-white text-2xl " >My Office</h1>
-                              <small >Basement, 27, opp. Cafe 99, near Jain ENT Hospital,  Satya Vihar, Indra Puri, Vidhayak Nagar, Lalkothi, Jaipur, Rajasthan 302015</small>
-                          </div>
-                      </div>
-                    </div>
-                      <form class="form w-full justify-center items-center lg:grid col-span-2 lg:mt-8 ">
-                          <div class="name-wrap w-[100%] justify-center items-center flex h-max  ">
-                              <input class="w-full bg-transparent border-b-2 border-[#4e4d4d] h-14 py-[1rem] text-white  " autocomplete="off" placeholder="Name*"  type="text" name="name">
-                          </div>
-                          <div class="name-wrap w-[100%] justify-center items-center flex h-max  ">
-                              <input class="w-full bg-transparent border-b-2 border-[#4e4d4d] h-14 py-[1rem] text-white  " autocomplete="off"  placeholder="Email*"  type="email" name="email">
-                          </div>
-                          <div class="name-wrap w-[100%] justify-center items-center flex h-max  ">
-                              <input class="w-full bg-transparent border-b-2 border-[#4e4d4d] h-14 py-[1rem] text-white  " autocomplete="off"  placeholder="Phone No*" type="number" name="phone">
-                          </div>
-                          <div class="name-wrap w-[100%] justify-center items-center flex h-max  ">
-                              <textarea class="w-full bg-transparent border-b-2 border-[#4e4d4d] h-40 py-[1rem] "  style="resize:none;"  name="massage" id="" placeholder="Massage*"  cols="30" rows="10"></textarea>
-                          </div>
-                          <div class="button-wrap flex items-center  w-[100%]  h-[6rem]  ">
-                              <button class="send  text-[#ff9d00] text-xl border-2 border-[#ff9d00] px-14 py-2 rounded-full  " >Send</button>
-                          </div>
-                      </form> 
-                  </saction>
-                  </div>
-              </div>
-  
-            <!-- center tile end 5 -->
+            </div>
+            <div
+              class="MainTile1-image-wrap-inner overflow-hidden w-full justify-center flex lg:hidden"
+            >
+              <button
+                id="nav-button-mobile "
+                class="button my-4 rounded-full px-3 py-3 text-white text-xl"
+              >
+                Download CV
+              </button>
+            </div>
           </div>
-          <!-- side bar -->
-          <div id="sidebar"class="container rounded-2xl overflow-hidden col-span-1 hidden lg:block lg:h-[100%]"  >
-            <!-- TIME IN JS -->
-            <div id="sidebar-container-timedate" class="sidebar-container-timedate grid text-center h-[20%] p-2" ></div>
-            <!-- TIME IN JS -->
-            <div class="follow-me text-center justify-center items-center grid h-[50%]" >
-              <div class="follow-text flex justify-between items-center text-white" >
-                <p>Follow Me</p>
-                <div class="yellow-line"></div>
-              </div>
-              <div  class="social-icons-wrap grid justify-center items-start text-white">
-                <i class="text-2xl my-1 fa-brands fa-instagram"></i>
-                <i class="text-2xl my-1 fa-brands fa-whatsapp"></i>
-                <i class="text-2xl my-1 fa-solid fa-at"></i>
+
+          <!-- center tile end -->
+          <!-- center tile 2 -->
+
+          <div
+            id="MainTile2"
+            class="container rounded-2xl p-7 col-span-7 overflow-hidden absolute"
+          >
+            <div
+              class="main-tile2-content-wrap w-full h-full container overflow-y-scroll"
+            >
+              <saction class="container grid grid-cols-2 lg:flex">
+                <div
+                  class="container w-full h-full lg:w-2/5 col-span-1 lg:h-5/6 grid justify-center items-center"
+                >
+                  <div
+                    class="image-wrap2 w-44 lg:w-64 rounded-t-3xl rounded-bl-3xl"
+                  >
+                    <img
+                      class="second-image lg:w-96 rounded-t-3xl rounded-bl-3xl"
+                      src="image/profile-img.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="container w-full col-span-1 lg:w-3/5 lg:h-5/6 py-14"
+                >
+                  <h1 class="text-white text-4xl text-[25px]">
+                    A short story about me , my mission,<br />
+                    thinking and craft.
+                  </h1>
+                  <p class="text-white text-md my-5">
+                    I’m a web designer who aware of the tiny moments in a
+                    persons life that reveal
+                    <br />
+                    greater truths. Aliquam erat volutpat. Nullam imperdiet
+                    sapien felis, <br />
+                    non lobortis odio mattis in. Quisque dapibus aliquet dictum.
+                    <br />
+                    Integer dapibus ullamcorper est, ac .
+                  </p>
+                  <div class="cotainer lg:grid lg:grid-cols-2 text-white">
+                    <ul class="list-item">
+                      <li>Date Of Birth:- <small>30.10.1989 </small></li>
+                      <li>Address:- <small>New York, USA </small></li>
+                      <li>Pin code:- <small>221500 </small></li>
+                    </ul>
+                    <ul class="list-item">
+                      <li>Email Id:- <small>mail@example.com</small></li>
+                      <li>Contact No:- <small>+123 456 7890 </small></li>
+                      <li>Alternative No:- <small>+123 456 7890</small></li>
+                    </ul>
+                  </div>
+                  <button
+                    class="button px-8 py-3 rounded-full my-5 text-white text-xl"
+                  >
+                    Hire me
+                  </button>
+                </div>
+              </saction>
+              <scation class="container relative">
+                <div
+                  class="hobbies-wrap container w-full lg:h-36 grid lg:grid-cols-5"
+                >
+                  <div
+                    class="hobbies container w-full h-36 grid col-span-1 justify-center items-center py-6"
+                  >
+                    <i class="text-center fa-solid fa-music"></i>
+                    <h1 class="text-white text-xl">Music</h1>
+                  </div>
+                  <div
+                    class="hobbies container w-full h-36 grid col-span-1 justify-center items-center py-6"
+                  >
+                    <i class="text-center fa-solid fa-plane-departure"></i>
+                    <h1 class="text-white text-xl">Travel</h1>
+                  </div>
+                  <div
+                    class="hobbies container w-full h-36 grid col-span-1 justify-center items-center py-6"
+                  >
+                    <i class="text-center fa-solid fa-tv"></i>
+                    <h1 class="text-white text-xl">Movie</h1>
+                  </div>
+                  <div
+                    class="hobbies container w-full h-36 grid col-span-1 justify-center items-center py-6"
+                  >
+                    <i class="text-center fa-solid fa-baseball-bat-ball"></i>
+                    <h1 class="text-white text-xl">Sports</h1>
+                  </div>
+                  <div
+                    class="hobbies container w-full h-36 grid col-span-1 justify-center items-center py-6"
+                  >
+                    <i class="text-center fa-solid fa-book-open"></i>
+                    <h1 class="text-white text-xl">Rading</h1>
+                  </div>
+                </div>
+              </scation>
+              <saction class="skills grid lg:grid-cols-2 lg:h-72 w-full">
+                <div class="w-full col-span-1 py-10 px-3">
+                  <h1 class="text-white text-4xl">
+                    I have been able to experience & <br />
+                    developing this type of skill.
+                  </h1>
+                  <p class="text-white text-lg mt-8">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolor tempora incidunt nulla. Neque commodi facere esse cum mollitia possimus! Vero vitae ea recusandae voluptates?
+                  </p>
+                </div>
+                <div class="lg:h-full w-full col-span-1 p-5 lg:p-10">
+                  <ul class="text-white flex items-center text-xl">
+                    <div class="dots1 rounded-full w-2 h-2 m-5"></div>
+                    <li>Computer:- <span class="text-[#ff9d00]" >PERCENTAGE</span></li>
+                  </ul>
+                  <ul class="text-white flex items-center text-xl">
+                    <div class="dots2 rounded-full w-2 h-2 m-5"></div>
+                    <li>Language:- <span class="text-[#ff9d00]" >PERCENTAGE</span></li>
+                  </ul>
+                  <ul class="text-white flex items-center text-xl">
+                    <div class="dots3 rounded-full w-2 h-2 m-5"></div>
+                    <li>Sports:- <span class="text-[#ff9d00]" >PERCENTAGE</span></li>
+                  </ul>
+                  <ul class="text-white flex items-center text-xl">
+                    <div class="dots4 rounded-full w-2 h-2 m-5"></div>
+                    <li>Photography:- <span class="text-[#ff9d00]" >PERCENTAGE</span></li>
+                  </ul>
+                  <ul class="text-white flex items-center text-xl">
+                    <div class="dots5 rounded-full w-2 h-2 m-5"></div>
+                    <li>Others:- <span class="text-[#ff9d00]" >PERCENTAGE</span></li>
+                  </ul>
+                </div>
+              </saction>
+              <saction
+                id="relode"
+                class="w-full h-[15rem] lg:h-[20rem] flex justify-center items-center overflow-hidden"
+              >
+                <div
+                  class="slider-wrap w-full lg:w-[35rem] h-full flex justify-center items-center"
+                >
+                  <div
+                    class="awards-slider owl-carousel owl-theme flex justify-center items-center"
+                  >
+                    <div class="text-center text-white">
+                      <div
+                        class="awards-image-wrap flex w-full justify-center items-center"
+                      >
+                        <div
+                          class="award-images w-20 h-20 rounded-full bg-white mb-2"
+                        ></div>
+                      </div>
+                      <h1 class="text-3xl">AWARD NAME</h1>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet non dignissimos dolore beatae aspernatur veniam commodi eaque architecto minus illo?</p>
+                    </div>
+                    <div class="text-center text-white">
+                      <div
+                        class="awards-image-wrap flex w-full justify-center items-center"
+                      >
+                        <div
+                          class="award-images w-20 h-20 rounded-full bg-white mb-2"
+                        ></div>
+                      </div>
+                      <h1 class="text-3xl">AWARD NAME</h1>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet non dignissimos dolore beatae aspernatur veniam commodi eaque architecto minus illo?</p>
+                    </div>
+                    <div class="text-center text-white">
+                      <div
+                        class="awards-image-wrap flex w-full justify-center items-center"
+                      >
+                        <div
+                          class="award-images w-20 h-20 rounded-full bg-white mb-2"
+                        ></div>
+                      </div>
+                      <h1 class="text-3xl">AWARD NAME</h1>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet non dignissimos dolore beatae aspernatur veniam commodi eaque architecto minus illo?</p>
+                    </div>
+                  </div>
+                </div>
+              </saction>
+            </div>
+          </div>
+
+          <!-- center tile 2 end -->
+          <!-- center tile 3 -->
+
+          <div
+            id="MainTile3"
+            class="container rounded-2xl p-7 absolute flex justify-center items-center overflow-hidden"
+          >
+            <div class="custome-wrap h-full w-full overflow-hidden ">
+              <div
+                id="custome-owl"
+                class="custome-owl w-full h-full owl-carousel owl-theme justify-center items-center"
+              >
+                <saction
+                  class="education-wrap-outer   "
+                >
+                  <div class="Education w-full h-10">
+                    <h1 class="text-[#ff9d00] lg:text-left text-4xl my-2">Education</h1>
+                  </div>
+                  <div class="relative">
+                    <div
+                      id="Education-main"
+                      class="Education-main grid lg:grid-cols-1 mt-14 w-full lg:h-full lg:overflow-y-scroll"
+                    >
+                      <div
+                        class="education-wrap w-full grid lg:grid-cols-2 relative"
+                      >
+                        <div
+                          class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10"
+                        >
+                          <h1 class="text-[#ff9d00] text-lg">2012 - 2015</h1>
+                          <h1 class="text-white lg:text-2xl">
+                            Art University - New York
+                          </h1>
+                          <h1 class="text-white lg:text-2xl">Degree</h1>
+                        </div>
+                        <div
+                          class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10"
+                        >
+                          <h1 class="text-[#ff9d00] text-lg">2012 - 2015</h1>
+                          <h1 class="text-white lg:text-2xl">
+                            Art University - New York
+                          </h1>
+                          <h1 class="text-white lg:text-2xl">Degree</h1>
+                        </div>
+                      </div>
+                      <div
+                        class="education-wrap2 w-full grid lg:grid-cols-2 relative"
+                      >
+                        <div
+                          class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10"
+                        >
+                          <h1 class="text-[#ff9d00] text-lg">2012 - 2015</h1>
+                          <h1 class="text-white lg:text-2xl">
+                            Art University - New York
+                          </h1>
+                          <h1 class="text-white lg:text-2xl">Degree</h1>
+                        </div>
+                        <div
+                          class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10"
+                        >
+                          <h1 class="text-[#ff9d00] text-lg">2012 - 2015</h1>
+                          <h1 class="text-white lg:text-2xl">
+                            Art University - New York
+                          </h1>
+                          <h1 class="text-white lg:text-2xl">Degree</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </saction>
+                <saction
+                  class="education-wrap-outer  "
+                >
+                  <div class="Education w-full h-10 ">
+                    <h1 class="text-[#ff9d00] lg:text-left  text-4xl my-2">Experience</h1>
+                  </div>
+                  <div class="relative">
+                    <div
+                      id="Education-main"
+                      class="Education-main grid grid-cols-1 mt-14 w-full h-full lg:overflow-y-scroll"
+                    >
+                      <div
+                        class="education-wrap w-full lg:grid grid-cols-2 relative"
+                      >
+                        <div
+                          class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10"
+                        >
+                          <h1 class="text-[#ff9d00] text-lg">2012 - 2015</h1>
+                          <h1 class="text-white lg:text-2xl">
+                            Art University - New York
+                          </h1>
+                          <h1 class="text-white lg:text-2xl">Degree</h1>
+                        </div>
+                        <div
+                          class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10"
+                        >
+                          <h1 class="text-[#ff9d00] text-lg">2012 - 2015</h1>
+                          <h1 class="text-white lg:text-2xl">
+                            Art University - New York
+                          </h1>
+                          <h1 class="text-white lg:text-2xl">Degree</h1>
+                        </div>
+                      </div>
+                      <div
+                        class="education-wrap2 w-full lg:grid grid-cols-2 relative"
+                      >
+                        <div
+                          class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10"
+                        >
+                          <h1 class="text-[#ff9d00] text-lg">2012 - 2015</h1>
+                          <h1 class="text-white lg:text-2xl">
+                            Art University - New York
+                          </h1>
+                          <h1 class="text-white lg:text-2xl">Degree</h1>
+                        </div>
+                        <div
+                          class="table-rows col-span-1 w-full h-[8rem] lg:h-[12rem] lg:pl-14 pt-10"
+                        >
+                          <h1 class="text-[#ff9d00] text-lg">2012 - 2015</h1>
+                          <h1 class="text-white lg:text-2xl">
+                            Art University - New York
+                          </h1>
+                          <h1 class="text-white lg:text-2xl">Degree</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </saction>
               </div>
             </div>
-            <div class="up-down-buttons py-5 grid justify-center items-center h-[30%]" >
-              <div class="upbutton-wrap flex justify-center items-center cursor-pointer" >
-                <i class="fa-solid fa-angle-up"></i>
+          </div>
+          <!-- center tile end 3 -->
+          <!-- center tile  4 -->
+          <div
+            id="MainTile4"
+            class="container rounded-2xl p-7 col-span-7 overflow-hidden"
+          >
+            <div class="main-tile4-content-wrap w-full h-full overflow-hidden">
+              <div class="Testimonials-heading w-full h-[10%]">
+                <h1 class="text-[#ff9d00] text-4xl">Testimonials</h1>
               </div>
-              <div class="downbutton-wrap flex justify-center items-center cursor-pointer" >
-                <i class="fa-solid fa-angle-down"></i>
+              <div
+                class="TestimonialsSlider owl-carousel owl-theme w-full h-full flex justify-between items-center"
+              >
+                <div
+                  class="Testimonials-cards w-[90%] h-[90%] rounded-xl p-7 my-14 relative overflow-hidden ml-[1rem]"
+                >
+                  <div
+                    class="icons-name-wrap w-full grid grid-cols-2 justify-between"
+                  >
+                    <i class="fa-solid fa-quote-left z-10"></i>
+                    <span
+                      class="text-2xl text-center uppercase text-[#ff9d00] italic z-10"
+                      >SHIKHA</span
+                    >
+                  </div>
+                  <div class="Testimonials-pharagraph-wrap z-20">
+                    <p class="text-center w-full text-[#cec9c9] my-8">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Omnis facilis ipsa asperiores in accusamus officiis,
+                      molestiae vero necessitatibus voluptatem odio, laborum
+                      quos eligendi sapiente
+                    </p>
+                  </div>
+                  <div
+                    class="Testimonials-images-wrap w-full bg-transparent flex justify-center items-center"
+                  >
+                    <div
+                      class="Testimonials-image bg-white rounded-full w-20 h-20 z-10 overflow-hidden"
+                    ></div>
+                  </div>
+                </div>
+                <div
+                  class="Testimonials-cards w-[90%] h-[90%] rounded-xl p-7 my-14 relative overflow-hidden ml-[1rem]"
+                >
+                  <div
+                    class="icons-name-wrap w-full grid grid-cols-2 justify-between"
+                  >
+                    <i class="fa-solid fa-quote-left z-10"></i>
+                    <span
+                      class="text-2xl text-center uppercase text-[#ff9d00] italic z-10"
+                      >SHIKHA</span
+                    >
+                  </div>
+                  <div class="Testimonials-pharagraph-wrap z-20">
+                    <p class="text-center w-full text-[#cec9c9] my-8">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Omnis facilis ipsa asperiores in accusamus officiis,
+                      molestiae vero necessitatibus voluptatem odio, laborum
+                      quos eligendi sapiente
+                    </p>
+                  </div>
+                  <div
+                    class="Testimonials-images-wrap w-full bg-transparent flex justify-center items-center"
+                  >
+                    <div
+                      class="Testimonials-image bg-white rounded-full w-20 h-20 z-10 overflow-hidden"
+                    ></div>
+                  </div>
+                </div>
+                <div
+                  class="Testimonials-cards w-[90%] h-[90%] rounded-xl p-7 my-14 relative overflow-hidden ml-[1rem]"
+                >
+                  <div
+                    class="icons-name-wrap w-full grid grid-cols-2 justify-between"
+                  >
+                    <i class="fa-solid fa-quote-left z-10"></i>
+                    <span
+                      class="text-2xl text-center uppercase text-[#ff9d00] italic z-10"
+                      >SHIKHA</span
+                    >
+                  </div>
+                  <div class="Testimonials-pharagraph-wrap z-20">
+                    <p class="text-center w-full text-[#cec9c9] my-8">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Omnis facilis ipsa asperiores in accusamus officiis,
+                      molestiae vero necessitatibus voluptatem odio, laborum
+                      quos eligendi sapiente
+                    </p>
+                  </div>
+                  <div
+                    class="Testimonials-images-wrap w-full bg-transparent flex justify-center items-center"
+                  >
+                    <div
+                      class="Testimonials-image bg-white rounded-full w-20 h-20 z-10 overflow-hidden"
+                    ></div>
+                  </div>
+                </div>
+                <div
+                  class="Testimonials-cards w-[90%] h-[90%] rounded-xl p-7 my-14 relative overflow-hidden ml-[1rem]"
+                >
+                  <div
+                    class="icons-name-wrap w-full grid grid-cols-2 justify-between"
+                  >
+                    <i class="fa-solid fa-quote-left z-10"></i>
+                    <span
+                      class="text-2xl text-center uppercase text-[#ff9d00] italic z-10"
+                      >SHIKHA</span
+                    >
+                  </div>
+                  <div class="Testimonials-pharagraph-wrap z-20">
+                    <p class="text-center w-full text-[#cec9c9] my-8">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Omnis facilis ipsa asperiores in accusamus officiis,
+                      molestiae vero necessitatibus voluptatem odio, laborum
+                      quos eligendi sapiente
+                    </p>
+                  </div>
+                  <div
+                    class="Testimonials-images-wrap w-full bg-transparent flex justify-center items-center"
+                  >
+                    <div
+                      class="Testimonials-image bg-white rounded-full w-20 h-20 z-10 overflow-hidden"
+                    ></div>
+                  </div>
+                </div>
               </div>
+              <div class="owl-nav2 px-10">
+                <div class="owl-prev2"></div>
+                <div class="owl-next2"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- center tile end 4 -->
+          <!-- center tile 5 -->
+
+          <div
+            id="MainTile5"
+            class="container rounded-2xl col-span-8 p-7 absolute"
+          >
+            <div
+              class="main-tile5-content-wrap overflow-y-scroll w-full h-full"
+            >
+              <saction>
+                <div class="Education w-full h-14 pl-10">
+                  <h1 class="text-[#ff9d00] text-4xl my-2">Get In Touch</h1>
+                </div>
+              </saction>
+              <saction class="grid lg:grid-cols-3">
+                <div
+                  class="social-items w-full h-[25rem] py-6 col-span-1 grid grid-rows-3 justify-center items-center"
+                >
+                  <div
+                    class="user-email grid grid-cols-3 justify-center items-center"
+                  >
+                    <i
+                      class="w-full justify-center items-center flex text-4xl fa-regular fa-envelope-open"
+                    ></i>
+                    <div class="grid col-span-2 email-me">
+                      <h1 class="text-white text-2xl">Mail Me</h1>
+                      <small>email@example.com</small>
+                    </div>
+                  </div>
+                  <div
+                    class="user-phone grid grid-cols-3 justify-center items-center"
+                  >
+                    <i
+                      class="w-full justify-center items-center flex text-4xl fa-solid fa-phone"
+                    ></i>
+                    <div class="grid col-span-2 call-me">
+                      <h1 class="text-white text-2xl">Call Us</h1>
+                      <small>+91 0000000000</small>
+                    </div>
+                  </div>
+                  <div
+                    class="user-address grid grid-cols-3 justify-center items-center"
+                  >
+                    <i
+                      class="w-full justify-center items-center flex text-4xl fa-regular fa-map"
+                    ></i>
+                    <div class="grid col-span-2 my-address">
+                      <h1 class="text-white text-2xl">My Office</h1>
+                      <small
+                        >Basement, 27, opp. Cafe 99, near Jain ENT Hospital,
+                        Satya Vihar, Indra Puri, Vidhayak Nagar, Lalkothi,
+                        Jaipur, Rajasthan 302015</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <form
+                  class="form w-full justify-center items-center lg:grid col-span-2 lg:mt-8"
+                >
+                  <div
+                    class="name-wrap w-[100%] justify-center items-center flex h-max"
+                  >
+                    <input
+                      class="w-full bg-transparent border-b-2 border-[#4e4d4d] h-14 py-[1rem] text-white"
+                      autocomplete="off"
+                      placeholder="Name*"
+                      type="text"
+                      name="name"
+                    />
+                  </div>
+                  <div
+                    class="name-wrap w-[100%] justify-center items-center flex h-max"
+                  >
+                    <input
+                      class="w-full bg-transparent border-b-2 border-[#4e4d4d] h-14 py-[1rem] text-white"
+                      autocomplete="off"
+                      placeholder="Email*"
+                      type="email"
+                      name="email"
+                    />
+                  </div>
+                  <div
+                    class="name-wrap w-[100%] justify-center items-center flex h-max"
+                  >
+                    <input
+                      class="w-full bg-transparent border-b-2 border-[#4e4d4d] h-14 py-[1rem] text-white"
+                      autocomplete="off"
+                      placeholder="Phone No*"
+                      type="number"
+                      name="phone"
+                    />
+                  </div>
+                  <div
+                    class="name-wrap w-[100%] justify-center items-center flex h-max"
+                  >
+                    <textarea
+                      class="w-full bg-transparent border-b-2 border-[#4e4d4d] h-40 py-[1rem]"
+                      style="resize: none"
+                      name="massage"
+                      id=""
+                      placeholder="Massage*"
+                      cols="30"
+                      rows="10"
+                    ></textarea>
+                  </div>
+                  <div class="button-wrap flex items-center w-[100%] h-[6rem]">
+                    <button
+                      class="send text-[#ff9d00] text-xl border-2 border-[#ff9d00] px-14 py-2 rounded-full"
+                    >
+                      Send
+                    </button>
+                  </div>
+                </form>
+              </saction>
+            </div>
+          </div>
+
+          <!-- center tile end 5 -->
+        </div>
+        <!-- side bar -->
+        <div
+          id="sidebar"
+          class="container rounded-2xl overflow-hidden col-span-1 hidden lg:block lg:h-[100%]"
+        >
+          <!-- TIME IN JS -->
+          <div
+            id="sidebar-container-timedate"
+            class="sidebar-container-timedate grid text-center h-[20%] p-2"
+          >
+        <div id="date" class="date"></div>
+            
+        </div>
+          <!-- TIME IN JS -->
+          <div
+            class="follow-me text-center justify-center items-center grid h-[60%]"
+          >
+            <div class="follow-text  flex items-center text-sm font-semibold uppercase ">follow <span class=" text-transparent">-</span>  <span class="text-[#ff9d00]">me</span> </div>
+            <div class="social-icons-wrap grid justify-center items-start text-white">
+              <a href="https://www.instagram.com/test_n_track/">
+                <i class="text-xl my-1 hover:text-[#ff9d00] transition-hidden fa-brands fa-instagram"></i>
+              </a>
+              <a href="">
+                <i class="text-xl my-1 hover:text-[#ff9d00] transition-hidden fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqZhTCnMrlmxFCxJgQqVwLtCFCFNmmjzzMVfszCSKxXvrKSQQXhPLrRxsVzWhhkPWrQQBV">
+                <i class="text-xl my-1 hover:text-[#ff9d00] transition-hidden fa-solid fa-at"></i>
+              </a>
+              <a href="https://www.facebook.com/testntrack">
+                <i class="text-xl my-1 hover:text-[#ff9d00] transition-hidden fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/testntrack/?viewAsMember=true">
+                <i class="text-xl my-1 hover:text-[#ff9d00] transition-hidden fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://twitter.com/testntrack">
+                <i class="text-xl my-1 hover:text-[#ff9d00] transition-hidden fa-brands fa-twitter"></i>
+              </a>
+              <a href="https://www.pinterest.com/HybridExamSystem/">
+                <i class="text-xl my-1 hover:text-[#ff9d00] transition-hidden fa-brands fa-pinterest-p"></i>
+              </a>
+            </div>
+          </div>
+          <div
+            class="up-down-buttons py-2 grid justify-center items-center h-[20%]"
+          >
+            <div
+              class="upbutton-wrap flex justify-center items-center cursor-pointer"
+            >
+              <i class="fa-solid fa-angle-up"></i>
+            </div>
+            <div
+              class="downbutton-wrap flex justify-center items-center cursor-pointer"
+            >
+              <i class="fa-solid fa-angle-down"></i>
             </div>
           </div>
         </div>
       </div>
-    <script src="js/sidebar.js"></script>
-    <script src="js/navigation.js"></script>
-    <script src="js/MainAnimation.js"></script>
-    <script src="js/anime.min.js"></script>
+    </div>
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/navigation.js"></script>
+    <script src="/js/MainAnimation.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -548,6 +910,7 @@
             nav: false,
           },
           1000: {
+          margin: 50,
             items: 1,
             nav: true,
           },
@@ -580,7 +943,7 @@
         autoplayHoverPause: true,
         margin: 10,
         nav: false,
-        dots:false,
+        dots: false,
         responsiveClass: true,
         responsive: {
           0: {
@@ -649,11 +1012,11 @@
             nav: false,
           },
           1000: {
-            items: 3,
+            items: 2,
             nav: true,
           },
           1200: {
-            items: 3,
+            items: 2,
             nav: true,
           },
           1500: {
@@ -670,6 +1033,8 @@
           },
         },
       });
+
+      
     </script>
   </body>
 </html>

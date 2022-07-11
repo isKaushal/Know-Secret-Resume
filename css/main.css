@@ -7,7 +7,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    transition: 1s ease-in-out;
 }
 
 html{
@@ -29,6 +28,8 @@ html{
 
 .main{
     background-color: rgb(27, 27, 27);
+    width: 100vw !important;
+    height: 100vh !important;
 }
 
 /*/*//*/*//*/*//*/*//*/*//* navigation bar */
@@ -134,7 +135,6 @@ html{
 /*/*//*/*//*/*//*/*//*/*//* side bar */
 
 #sidebar{
-    height: 85%;
     width: 5.5rem;
     background-color: var(--cards-color);
 }
@@ -155,21 +155,19 @@ html{
 }
 
 .follow-text{
-    opacity: 80%;
-    margin-top: 4rem;
-    width: 10rem;
+    color: #ffffff;
     transform: rotateZ(90deg);
 }
 
-.yellow-line{
-    height: 3px;
-    width: 5rem;
-    background-color: var(--Yellow--color);
-}
-
 .social-icons-wrap{
-    height: 5rem;
+    transition: none;
     font-size: 20px;
+}
+.social-icons-wrap > a{
+    transition: none;
+}
+.social-icons-wrap > i{
+    transition: none;
 }
 
 .upbutton-wrap,
@@ -188,6 +186,7 @@ html{
 .navigation-button-wrap{
     transition: var(--transition--);
 }
+
 
 
 /*/*//*/*//*/*//*/*//*/*//* side bar */

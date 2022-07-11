@@ -141,6 +141,7 @@ if (window.innerWidth > 1024) {
         }
             
     })
+    
 } else{
     NavButtonsWrap.addEventListener("click",(event)=>{
         element = event.target.parentNode;
@@ -256,7 +257,7 @@ if (window.innerWidth > 1024) {
 }
 
 
-if (window.innerWidth >= 1024) {
+if (window.innerWidth >= 1023) {
 
     NavBar.classList.remove("left-[-100%]");
     NavButtonsWrap.classList.remove("grid-cols-2");
@@ -272,7 +273,6 @@ if (window.innerWidth >= 1024) {
         button.classList.remove("grid-cols-3")
     })
 }
-console.log(crousel);
 
 function NavToggle() {
     if (window.innerWidth < 1024) {
@@ -292,8 +292,12 @@ function navExpended() {
         NavName.style.fontSize = "2.25rem";
         NavImage.style.width =  "11rem";
         NavImageWrap.style.height = "65%";
-        CenterTile1.style.width = "62rem";
-        CenterContentWrap.style.width = "62rem";
+
+        if (window.innerWidth >= 1024) {
+            CenterContentWrap.style.width = "48rem";
+        } else {
+            CenterContentWrap.style.width = "62rem";
+        }
         NavBar.style.width = "20rem";
         NavAllIconsWrap.forEach((button) => {
             button.classList.add("grid-cols-3")
@@ -318,8 +322,13 @@ function navcollapse() {
 
     NavButton.style.opacity = "0";
     setTimeout(() => {
-        CenterTile1.style.width = "81rem";
-        CenterContentWrap.style.width = "81rem";
+        if (window.innerWidth >= 1024) {
+            CenterContentWrap.style.width = "50rem";
+        }
+        if (window.innerWidth >= 1280) {
+            CenterContentWrap.style.width = "70rem";
+        }
+
         NavBar.style.width = "5.5rem";
         NavName.style.fontSize = "14px";
         NavImage.style.width =  "4rem";
@@ -330,7 +339,16 @@ function navcollapse() {
             button.classList.remove("grid-cols-3")
         })
     }, 1300);
-    NavAllIcons.forEach((button) => {
-        button.classList.add("h-[4.3rem]")
-    })
+    
+    if (window.innerWidth >= 1024 ) {
+        NavAllIcons.forEach((button) => {
+            button.classList.add("h-[3.8rem]");
+        })
+    } 
+    if(window.innerWidth >= 1280){
+        NavAllIcons.forEach((button) => {
+            button.classList.add("h-[4.5rem]");
+        })
+    }
 }
+// small 3.2rem
